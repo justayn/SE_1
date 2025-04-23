@@ -1,0 +1,311 @@
+import React from "react";
+import image7 from "./image-7.png";
+import "./style.css";
+<style>
+.iphone-pro-max {
+  background-color: #4b4c66;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.iphone-pro-max .div {
+  background-color: #4b4c66;
+  height: 956px;
+  overflow: hidden;
+  position: relative;
+  width: 440px;
+}
+
+.iphone-pro-max .overlap-group {
+  height: 419px;
+  left: -129px;
+  position: absolute;
+  top: -79px;
+  width: 755px;
+}
+
+.iphone-pro-max .ellipse {
+  background-color: #2c2d47;
+  border-radius: 232.5px / 165.5px;
+  height: 331px;
+  left: 290px;
+  position: absolute;
+  top: 24px;
+  width: 465px;
+}
+
+.iphone-pro-max .ellipse-2 {
+  background-color: #2c2d47;
+  border-radius: 213px / 209.5px;
+  height: 419px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 426px;
+}
+
+.iphone-pro-max .image {
+  height: 240px;
+  left: 133px;
+  object-fit: cover;
+  position: absolute;
+  top: 124px;
+  width: 240px;
+}
+
+.iphone-pro-max .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 45px;
+  font-weight: 600;
+  left: 386px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 185px;
+  white-space: nowrap;
+  width: 106px;
+}
+
+.iphone-pro-max .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Inria Sans-Bold", Helvetica;
+  font-size: 50px;
+  font-weight: 700;
+  left: 381px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 228px;
+  white-space: nowrap;
+  width: 244px;
+}
+
+.iphone-pro-max .overlap {
+  height: 465px;
+  left: -124px;
+  position: absolute;
+  top: 690px;
+  width: 776px;
+}
+
+.iphone-pro-max .overlap-2 {
+  height: 465px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 776px;
+}
+
+.iphone-pro-max .ellipse-3 {
+  background-color: #2c2d47;
+  border-radius: 232.5px / 165.5px;
+  height: 331px;
+  left: 311px;
+  position: absolute;
+  top: 0;
+  width: 465px;
+}
+
+.iphone-pro-max .ellipse-4 {
+  background-color: #2c2d47;
+  border-radius: 232.5px / 165.5px;
+  height: 331px;
+  left: 0;
+  position: absolute;
+  top: 134px;
+  width: 465px;
+}
+
+.iphone-pro-max .p {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  left: 157px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 129px;
+  width: 361px;
+}
+
+.iphone-pro-max .rectangle {
+  background-color: #d9d9d9;
+  height: 35px;
+  left: 280px;
+  position: absolute;
+  top: 89px;
+  width: 35px;
+}
+
+.iphone-pro-max .rectangle-2 {
+  background-color: #d9d9d9;
+  height: 35px;
+  left: 374px;
+  position: absolute;
+  top: 89px;
+  width: 35px;
+}
+
+.iphone-pro-max .rectangle-3 {
+  background-color: #d9d9d9;
+  height: 35px;
+  left: 421px;
+  position: absolute;
+  top: 89px;
+  width: 35px;
+}
+
+.iphone-pro-max .rectangle-4 {
+  background-color: #d9d9d9;
+  height: 35px;
+  left: 327px;
+  position: absolute;
+  top: 89px;
+  width: 35px;
+}
+
+.iphone-pro-max .rectangle-5 {
+  background-color: #d9d9d9;
+  height: 35px;
+  left: 233px;
+  position: absolute;
+  top: 89px;
+  width: 35px;
+}
+
+.iphone-pro-max .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 30px;
+  font-weight: 600;
+  left: 132px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 366px;
+  width: 190px;
+}
+
+.iphone-pro-max .overlap-3 {
+  height: 77px;
+  left: 31px;
+  position: absolute;
+  top: 439px;
+  width: 366px;
+}
+
+.iphone-pro-max .rectangle-6 {
+  background-color: #f8f8f8;
+  border-radius: 13px;
+  height: 77px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 363px;
+}
+
+.iphone-pro-max .text-wrapper-4 {
+  color: #7b6c6c;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  width: 366px;
+}
+
+.iphone-pro-max .overlap-4 {
+  height: 77px;
+  left: 28px;
+  position: absolute;
+  top: 557px;
+  width: 366px;
+}
+
+.iphone-pro-max .rectangle-7 {
+  background-color: #f8f8f8;
+  border-radius: 13px;
+  height: 77px;
+  left: 3px;
+  position: absolute;
+  top: 0;
+  width: 363px;
+}
+
+.iphone-pro-max .text-wrapper-5 {
+  color: #7b6c6c;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 17px;
+  width: 366px;
+}
+</style>
+
+export const IphoneProMax = () => {
+  return (
+    <div className="iphone-pro-max">
+      <div className="div">
+        <div className="overlap-group">
+          <div className="ellipse" />
+
+          <div className="ellipse-2" />
+
+          <img className="image" alt="Image" src={image7} />
+
+          <div className="text-wrapper">FIT</div>
+
+          <div className="text-wrapper-2">MOTION</div>
+        </div>
+
+        <div className="overlap">
+          <div className="overlap-2">
+            <div className="ellipse-3" />
+
+            <div className="ellipse-4" />
+
+            <p className="p">Sign in in another Account</p>
+
+            <div className="rectangle" />
+
+            <div className="rectangle-2" />
+
+            <div className="rectangle-3" />
+
+            <div className="rectangle-4" />
+          </div>
+
+          <div className="rectangle-5" />
+        </div>
+
+        <div className="text-wrapper-3">WELCOME!</div>
+
+        <div className="overlap-3">
+          <div className="rectangle-6" />
+
+          <div className="text-wrapper-4">LOGIN</div>
+        </div>
+
+        <div className="overlap-4">
+          <div className="rectangle-7" />
+
+          <div className="text-wrapper-5">SIGN IN</div>
+        </div>
+      </div>
+    </div>
+  );
+};

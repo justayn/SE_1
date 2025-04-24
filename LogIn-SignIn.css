@@ -1,186 +1,233 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #fff2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.log-box {
-    width: 400px;
-    height: 450px;
-    padding: 40px;
-    position: relative;
-    background: #fff;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-}
-
-.log-box form {
-    width: 100%;
-}
-
-h2 {
-    margin: 0 0 20px;
-    font-size: 2em;
-    padding: 0;
-    color: #333;
-    text-align: center;
-}
-
-.textbox {
-    position: relative;
-    width: 100%;
-    padding: 10px 0;
-    margin: 30px 0;
-}
-
-.textbox input {
-    width: 100%;
-    padding: 10px 10px 10px 35px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.textbox input:focus {
-    border-color: #ff6b6b;
-    box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
-}
-
-.textbox label {
-    position: absolute;
-    top: 50%;
-    left: 35px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #999;
-    pointer-events: none;
-    transition: 0.3s;
-}
-
-.textbox input:focus ~ label,
-.textbox input:valid ~ label {
-    top: -5px;
-    left: 5px;
-    color: #ff6b6b;
-    font-size: 0.75em;
-    background: #fff;
-    padding: 0 5px;
-}
-
-.textbox .Icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666;
-    font-size: 1.2em;
-    z-index: 1;
-}
-
-.remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0 30px;
-    font-size: 0.9em;
-}
-
-.remember-forgot label {
-    display: flex;
-    align-items: center;
-}
-
-.remember-forgot label input {
-    margin-right: 5px;
-    accent-color: #ff6b6b;
-}
-
-.remember-forgot a {
-    color: #ff6b6b;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    width: 100%;
-    height: 45px;
-    background: #ff6b6b;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background: #ff5252;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(255, 107, 107, 0.3);
-}
-
-.btn:active {
-    transform: translateY(0);
-}
-
-.sign-up-link {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.9em;
-    color: #333;
-}
-
-.sign-up-link a {
-    color: #ff6b6b;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.sign-up-link a:hover {
-    text-decoration: underline;
-}
-
-/* Add animation for input focus */
-@keyframes inputFocus {
-    0% { border-color: #ccc; }
-    100% { border-color: #ff6b6b; }
-}
-
-/* Responsive adjustments */
-@media (max-width: 430px) {
-    .log-box {
-        width: 90%;
-        padding: 30px;
-    }
-    
-    h2 {
-        font-size: 1.7em;
-    }
-    
-    .remember-forgot {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #fff2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0; /* Added to body to ensure full viewport height */
+        }
+        .log-box {
+            width: 90%; /* Changed from fixed pixel width to percentage */
+            max-width: 400px; /* Added max-width to prevent it from becoming too wide on large screens */
+            padding: 30px; /* Reduced padding for smaller screens */
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column; /* Added to make the form elements stack properly */
+            align-items: stretch; /* Added to make form elements stretch to container width */
+        }
+        .log-box form {
+            width: 100%;
+            display: flex; /* Added to enable flexbox properties for the form */
+            flex-direction: column; /* Stack form elements vertically */
+            align-items: stretch; /* Stretch form elements to container width */
+        }
+        h2 {
+            margin: 0 0 20px;
+            font-size: 1.8em; /* Reduced font size for better responsiveness */
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .textbox {
+            position: relative;
+            width: 100%;
+            padding: 10px 0;
+            margin: 20px 0; /* Reduced margin for vertical spacing */
+        }
+        .textbox input {
+            width: 100%;
+            padding: 10px 10px 10px 35px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em; /* Reduced font size for better responsiveness */
+            color: #333;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .textbox input:focus {
+            border-color: #ff6b6b;
+            box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+        }
+        .textbox label {
+            position: absolute;
+            top: 50%;
+            left: 35px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #999;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+        .textbox input:focus ~ label,
+        .textbox input:valid ~ label {
+            top: -5px;
+            left: 5px;
+            color: #ff6b6b;
+            font-size: 0.75em;
+            background: #fff;
+            padding: 0 5px;
+        }
+        .textbox .Icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 1.2em;
+            z-index: 1;
+        }
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0 20px; /* Reduced margin for vertical spacing */
+            font-size: 0.8em; /* Reduced font size for better responsiveness */
+            flex-wrap: wrap; /* Added to handle small screens */
+            gap: 10px; /* Added gap for spacing when wrapped */
+        }
+        .remember-forgot label {
+            display: flex;
+            align-items: center;
+        }
+        .remember-forgot label input {
+            margin-right: 5px;
+            accent-color: #ff6b6b;
+        }
+        .remember-forgot a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            width: 100%;
+            height: 40px; /* Reduced height for smaller screens */
+            background: #ff6b6b;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(255, 107, 107, 0.3);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .sign-up-link {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em; /* Reduced font size for better responsiveness */
+            color: #333;
+        }
+        .sign-up-link a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .sign-up-link a:hover {
+            text-decoration: underline;
+        }
+        /* Add animation for input focus */
+        @keyframes inputFocus {
+            0% { border-color: #ccc; }
+            100% { border-color: #ff6b6b; }
+        }
+        /* Responsive adjustments */
+        @media (max-width: 430px) { /* Changed max-width to 430px to match CSS media query */
+            .log-box {
+                width: 95%; /* Further increased width for very small screens */
+                padding: 20px; /* Further reduced padding */
+            }
+            h2 {
+                font-size: 1.5em; /* Further reduced font size for very small screens */
+            }
+            .textbox {
+                margin: 15px 0; /* Further reduced vertical margin */
+            }
+            .textbox input {
+                font-size: 0.9em; /* Further reduced input font size */
+                padding: 8px 10px 8px 30px; /* Adjusted padding for smaller input fields*/
+            }
+            .textbox label{
+                font-size: 0.9em; /* Further reduced label font size */
+            }
+            .remember-forgot {
+                font-size: 0.75em; /* Further reduced font size */
+            }
+            .btn {
+                font-size: 0.9em; /* Further reduced button font size */
+                height: 35px; /* Further reduced button height */
+            }
+            .sign-up-link {
+                font-size: 0.75em; /* Further reduced font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="log-box">
+        <form>
+            <h2>Log In</h2>
+            <div class="textbox">
+                <i class="Icon">&#xf007;</i>
+                <input type="text" required>
+                <label>Name</label>
+            </div>
+            <div class="textbox">
+                <i class="Icon">&#xf084;</i>
+                <input type="text" required>
+                <label>Birthday</label>
+            </div>
+            <div class="textbox">
+                <i class="Icon">&#xf0e0;</i>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="textbox">
+                <i class="Icon">&#xf023;</i>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="textbox">
+                <i class="Icon">&#xf023;</i>
+                <input type="password" required>
+                <label>Confirm Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="sign-up-link">
+                Already have an account? <a href="#">Log in</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
